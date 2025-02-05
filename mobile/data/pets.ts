@@ -1,4 +1,4 @@
-import { FeedPet } from '../interfaces/FeedPet';
+import { FeedPet } from '../interfaces/PetProfile';
 
 export const pets: FeedPet[] = [
  {

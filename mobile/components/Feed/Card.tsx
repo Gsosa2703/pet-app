@@ -1,16 +1,17 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'; 
-import { FeedPet } from '../../interfaces/FeedPet';
+import { FeedPet } from '../../interfaces/PetProfile';
 import Carousel from './CarouselCard';
 
-const CardFeed: React.FC<FeedPet> = ({
-  images,
-  owner,
-  shelter,
-  name,
-  breed,
-  age,
+interface CardFeedProps {
+  pet: FeedPet; 
+  onNavigateToProfile: () => void;
+}
+
+const CardFeed: React.FC<CardFeedProps> = ({
+  pet : { id, images, owner, shelter, name, breed, age },
+  onNavigateToProfile,
 }) => {
   return (
     <View style={styles.card}>
@@ -27,7 +28,7 @@ const CardFeed: React.FC<FeedPet> = ({
        <View style={styles.additionalActions}>
 
         {/* Profile Pet Button */}
-        <TouchableOpacity style={styles.iconButton} >
+        <TouchableOpacity style={styles.iconButton} onPress={onNavigateToProfile}>
           <Icon name="paw-outline" size={20} color="#666" />
         </TouchableOpacity>
 

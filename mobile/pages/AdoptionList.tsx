@@ -1,24 +1,24 @@
 import React from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
-import CardFeed from './Card';
-import { FeedPet } from '../../interfaces/FeedPet';
-import { pets } from '../../data/pets'
+import CardFeed from '../components/Feed/Card';
+import { pets } from '../data/pets'
+import { useNavigation } from '@react-navigation/native';
+
+type FeedScreenNavigationProp = {
+  navigate: (screen: string, params: { pet: any }) => void;
+};
 
 const Feed: React.FC = () => {
+  const navigation = useNavigation<FeedScreenNavigationProp>();
+
   return (
     <View style={styles.container}>
     <FlatList
       data={pets}
       renderItem={({ item }) => (
         <CardFeed
-          id={item.id}
-          images={item.images}
-          shelter={item.shelter}
-          owner={item.owner}
-          description={item.description}
-          name={item.name}
-          breed={item.breed}
-          age={item.age}
+          pet={item}
+          onNavigateToProfile={() => navigation.navigate('PetProfile', { pet: item })}
         />
       )}
       keyExtractor={(item) => item.id}
@@ -29,7 +29,7 @@ const Feed: React.FC = () => {
 };
 const styles = StyleSheet.create({
   container: {
-    flex: 1, // Ensures the FlatList takes up the full screen height
+    flex: 1,
     backgroundColor: '#fff',
     padding: 16,
   },
