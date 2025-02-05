@@ -1,13 +1,13 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons'; // Use MaterialIcons for icons
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons'; 
 import { FeedPet } from '../../interfaces/FeedPet';
+import Carousel from './CarouselCard';
 
 const CardFeed: React.FC<FeedPet> = ({
   images,
-  posterImage,
-  posterName,
-  description,
+  owner,
+  shelter,
   name,
   breed,
   age,
@@ -16,28 +16,29 @@ const CardFeed: React.FC<FeedPet> = ({
     <View style={styles.card}>
       {/* Poster Info */}
       <View style={styles.posterInfo}>
-        <Image source={{ uri: posterImage }} style={styles.posterImage} />
-        <Text style={styles.posterName}>{posterName}</Text>
+        <Image source={{ uri: owner?.profileImage || shelter?.profileImage || "" }} style={styles.posterImage} />
+        <Text style={styles.posterName}>{owner?.name || shelter?.name || ""} </Text>
       </View>
 
       {/* Carousel for Pet Images */}
-      <ScrollView horizontal pagingEnabled style={styles.carousel}>
-        {images.map((image, index) => (
-          <Image key={index} source={{ uri: image }} style={styles.petImage} />
-        ))}
-      </ScrollView>
+      <Carousel images={images} />
 
        {/* Share and Favorite Buttons */}
        <View style={styles.additionalActions}>
 
+        {/* Profile Pet Button */}
+        <TouchableOpacity style={styles.iconButton} >
+          <Icon name="paw-outline" size={20} color="#666" />
+        </TouchableOpacity>
+
         {/* Favorite Button */}
         <TouchableOpacity style={styles.iconButton}>
-          <Icon name="favorite-border" size={20} color="#666" />
+          <Icon name="heart-outline" size={20} color="#666" />
         </TouchableOpacity>
 
         {/* Share Button */}
           <TouchableOpacity style={styles.iconButton}>
-          <Icon name="share" size={20} color="#666" />
+          <Icon name="share-social-outline" size={20} color="#666" />
         </TouchableOpacity>
       </View>
 
@@ -48,22 +49,22 @@ const CardFeed: React.FC<FeedPet> = ({
         <Text style={styles.age}>🎂 {age}</Text>
       </View>
 
-      {/* Description */}
-      <Text style={styles.description}>{description}</Text>
-
       {/* Action Buttons */}
       <View style={styles.actions}>
+
         {/* Adopt Button */}
         <TouchableOpacity style={styles.minimalButton}>
-          <Icon name="pets" size={20} color="#4caf50" />
+          <Icon name="heart-circle-outline" size={20} color="#4caf50" />
           <Text style={styles.buttonText}>Adopta</Text>
         </TouchableOpacity>
 
         {/* Donate Button */}
-        <TouchableOpacity style={styles.minimalButton}>
-          <Icon name="volunteer-activism" size={20} color="#ff5722" />
-          <Text style={styles.buttonText}>Dona</Text>
-        </TouchableOpacity>
+        { shelter && (
+          <TouchableOpacity style={styles.minimalButton}>
+            <Icon name="rocket-outline" size={20} color="#ff5722" />
+            <Text style={styles.buttonText}>Dona</Text>
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
