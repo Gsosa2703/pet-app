@@ -1,4 +1,4 @@
-
+import {Media} from './Media'
 
 export interface Shelter {
   id: string;
@@ -17,7 +17,7 @@ export interface Owner {
 }
 export interface FeedPet {
   id: string;
-  images: string[]; // Array of image URLs for the carousel
+  images: Media[]; // Array of image URLs for the carousel
   description: string; // Description of the pet
   name: string; // Pet's name
   breed: string; // Pet's breed

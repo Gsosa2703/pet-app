@@ -3,11 +3,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import AdoptionList from './pages/AdoptionList';
 import PetProfile from './pages/PetPage';
-
+import {FeedPet} from './interfaces/PetProfile'
 
 export type RootStackParamList = {
   AdoptionList: undefined;
-  PetProfile: { pet: any }; // Define route params for PetProfile
+  PetProfile: { pet: FeedPet }; // Define route params for PetProfile
 };
 
 const Stack = createStackNavigator<RootStackParamList>();

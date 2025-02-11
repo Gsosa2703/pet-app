@@ -5,26 +5,12 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from '../App';
-
+import DonationsTab from '../components/DonationsTab/index';
+import MediaTab  from '../components/MediaTab/index'
 // Tabs Screens
 const HistoryTab = ({ pet }: { pet: any }) => (
   <View style={styles.tabContainer}>
     <Text>{pet.history || 'No history available.'}</Text>
-  </View>
-);
-
-const MediaTab = ({ pet }: { pet: any }) => (
-  <View style={styles.tabContainer}>
-    {pet.images.map((image: string, index: number) => (
-      <Image key={index} source={{ uri: image }} style={styles.mediaImage} />
-    ))}
-    <Text>{pet.videos ? 'Videos coming soon!' : 'No videos available.'}</Text>
-  </View>
-);
-
-const DonationsTab = ({ pet }: { pet: any }) => (
-  <View style={styles.tabContainer}>
-    <Text>{pet.donations || 'No donations have been made yet.'}</Text>
   </View>
 );
 
@@ -43,7 +29,7 @@ const PetProfile: React.FC<Props> = ({ route }) => {
     <View style={styles.container}>
       {/* Header with Image */}
       <View style={styles.header}>
-        <Image source={{ uri: pet.images[0] }} style={styles.petImage} />
+        <Image source={{ uri: pet.images[0].uri }} style={styles.petImage} />
         <TouchableOpacity style={styles.favoriteButton}>
           <Icon name="favorite-border" size={24} color="#f55" />
         </TouchableOpacity>
@@ -55,7 +41,6 @@ const PetProfile: React.FC<Props> = ({ route }) => {
           {pet.name} <Icon name="male" size={16} color="#0093E9" />
         </Text>
         <Text style={styles.breed}>{pet.breed} • {pet.age}</Text>
-        <Text style={styles.description}>{pet.description}</Text>
       </View>
 
       {/* Tabs */}
@@ -70,10 +55,10 @@ const PetProfile: React.FC<Props> = ({ route }) => {
           {() => <HistoryTab pet={pet} />}
         </Tab.Screen>
         <Tab.Screen name="Media">
-          {() => <MediaTab pet={pet} />}
+          {() => <MediaTab media={pet.images} />}
         </Tab.Screen>
         <Tab.Screen name="Donations">
-          {() => <DonationsTab pet={pet} />}
+          {() => <DonationsTab />}
         </Tab.Screen>
       </Tab.Navigator>
     </View>

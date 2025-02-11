@@ -22,7 +22,7 @@ const CardFeed: React.FC<CardFeedProps> = ({
       </View>
 
       {/* Carousel for Pet Images */}
-      <Carousel images={images} />
+      <Carousel images={images.map((value) => value.uri)} />
 
        {/* Share and Favorite Buttons */}
        <View style={styles.additionalActions}>

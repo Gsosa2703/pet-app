@@ -4,9 +4,18 @@ export const pets: FeedPet[] = [
  {
    id: '1',
    images: [
-     'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
-     'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
-     'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+    {
+      type: "image",
+      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+    },
+    {
+      type: "image",
+      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+    },
+    {
+      type: "image",
+      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+    }
    ],
    shelter : {
      id: "1",
@@ -22,9 +31,18 @@ export const pets: FeedPet[] = [
  {
    id: '2',
    images: [
-     'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
-     'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
-     'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+    {
+      type: "image",
+      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+    },
+    {
+      type: "image",
+      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+    },
+    {
+      type: "image",
+      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+    }
    ],
    owner: {
      id: "1",
@@ -39,9 +57,18 @@ export const pets: FeedPet[] = [
  {
    id: '3',
    images: [
-     'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
-     'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
-     'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+    {
+      type: "image",
+      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+    },
+    {
+      type: "image",
+      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+    },
+    {
+      type: "image",
+      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+    }
    ],
    owner: {
      id: "2",
