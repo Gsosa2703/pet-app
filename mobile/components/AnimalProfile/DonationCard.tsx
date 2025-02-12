@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import {Donation} from '../../interfaces/Donation'
+import {Donation} from '../../interfaces/Animal/Donation'
 
 
 const DonationCard: React.FC<Donation> = ({ user, amount, message, timestamp }) => {

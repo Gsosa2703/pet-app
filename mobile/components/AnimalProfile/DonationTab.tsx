@@ -2,11 +2,15 @@ import React from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import DonationCard from './DonationCard';
 import SponsorButton from './SponsorButton';
-import { donations } from '../../data/donations';
+import {Donation} from '../../interfaces/Animal/Donation';
+
+interface DonationsTabProps {
+  donations: Donation[];
+}
 
 
-const DonationsTab: React.FC = () => {
-  return (
+const DonationsTab: React.FC<DonationsTabProps> = ({ donations }) => {
+  return ( donations && 
     <View style={styles.container}>
       {donations.length > 0 ? (
         <FlatList
@@ -19,7 +23,6 @@ const DonationsTab: React.FC = () => {
         <Text style={styles.noDonations}>No donations have been made yet.</Text>
       )}
 
-      {/* Sponsor Button */}
       <SponsorButton />
     </View>
   );

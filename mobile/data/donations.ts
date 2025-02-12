@@ -1,4 +1,4 @@
-import {Donation} from '../interfaces/Donation'
+import {Donation} from '../interfaces/Animal/Donation'
 // Mock Donations Data
 export const donations: Donation[] = [
  {

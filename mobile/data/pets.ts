@@ -1,6 +1,8 @@
-import { FeedPet } from '../interfaces/PetProfile';
+import { Animal } from '../interfaces/Animal/Animal';
+import {donations} from './donations'
+import {history} from './history'
 
-export const pets: FeedPet[] = [
+export const pets: Animal[] = [
  {
    id: '1',
    images: [
@@ -10,11 +12,15 @@ export const pets: FeedPet[] = [
     },
     {
       type: "image",
-      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+      uri:  'https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVycm98ZW58MHx8MHx8fDA%3D',
     },
     {
       type: "image",
-      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+      uri:  'https://images.ctfassets.net/denf86kkcx7r/6ud6myHXqZvLY2o8sNf8nm/48a07b218d355a0cb805f6275ba42cbf/ojosperro-78?fm=webp&w=913',
+    },
+    {
+      type: "image",
+      uri:  'https://plus.unsplash.com/premium_photo-1722859221349-26353eae4744?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVycm98ZW58MHx8MHx8fDA%3D',
     }
    ],
    shelter : {
@@ -27,6 +33,9 @@ export const pets: FeedPet[] = [
    name: 'Whiskers',
    breed: 'Siamese Cat',
    age: '2 years',
+   donations,
+   history
+
  },
  {
    id: '2',
@@ -37,11 +46,15 @@ export const pets: FeedPet[] = [
     },
     {
       type: "image",
-      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+      uri:  'https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVycm98ZW58MHx8MHx8fDA%3D',
     },
     {
       type: "image",
-      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+      uri:  'https://images.ctfassets.net/denf86kkcx7r/6ud6myHXqZvLY2o8sNf8nm/48a07b218d355a0cb805f6275ba42cbf/ojosperro-78?fm=webp&w=913',
+    },
+    {
+      type: "image",
+      uri:  'https://plus.unsplash.com/premium_photo-1722859221349-26353eae4744?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVycm98ZW58MHx8MHx8fDA%3D',
     }
    ],
    owner: {
@@ -53,6 +66,8 @@ export const pets: FeedPet[] = [
    name: 'Buddy',
    breed: 'Golden Retriever',
    age: '6 months',
+   donations,
+   history
  },
  {
    id: '3',
@@ -63,11 +78,15 @@ export const pets: FeedPet[] = [
     },
     {
       type: "image",
-      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+      uri:  'https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVycm98ZW58MHx8MHx8fDA%3D',
     },
     {
       type: "image",
-      uri:  'https://i0.wp.com/puppis.blog/wp-content/uploads/2022/03/etapas-desarrollo-perros-cachorros-min.jpg?resize=768%2C604&ssl=1',
+      uri:  'https://images.ctfassets.net/denf86kkcx7r/6ud6myHXqZvLY2o8sNf8nm/48a07b218d355a0cb805f6275ba42cbf/ojosperro-78?fm=webp&w=913',
+    },
+    {
+      type: "image",
+      uri:  'https://plus.unsplash.com/premium_photo-1722859221349-26353eae4744?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVycm98ZW58MHx8MHx8fDA%3D',
     }
    ],
    owner: {
@@ -79,5 +98,7 @@ export const pets: FeedPet[] = [
    name: 'Buddy',
    breed: 'Golden Retriever',
    age: '6 months',
+   donations,
+   history
  },
 ];

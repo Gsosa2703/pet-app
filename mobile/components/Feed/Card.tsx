@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'; 
-import { FeedPet } from '../../interfaces/PetProfile';
+import { Animal } from '../../interfaces/Animal/Animal';
 import Carousel from './CarouselCard';
 
 interface CardFeedProps {
-  pet: FeedPet; 
+  pet: Animal; 
   onNavigateToProfile: () => void;
 }
 

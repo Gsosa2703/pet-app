@@ -2,12 +2,12 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import AdoptionList from './pages/AdoptionList';
-import PetProfile from './pages/PetPage';
-import {FeedPet} from './interfaces/PetProfile'
+import PetProfile from './pages/AnimalProfile';
+import {Animal} from './interfaces/Animal/Animal'
 
 export type RootStackParamList = {
   AdoptionList: undefined;
-  PetProfile: { pet: FeedPet }; // Define route params for PetProfile
+  PetProfile: { pet: Animal }; // Define route params for PetProfile
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
