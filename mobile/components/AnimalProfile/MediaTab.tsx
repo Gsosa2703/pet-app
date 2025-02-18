@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { View, Image, TouchableOpacity, Modal, StyleSheet } from 'react-native';
 import MasonryList from "react-native-masonry-list";
 import ImageViewing from 'react-native-image-viewing';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Media } from '../../interfaces/Media';
 
 interface MediaTabProps {

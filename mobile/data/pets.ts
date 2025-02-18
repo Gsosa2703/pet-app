@@ -27,7 +27,20 @@ export const pets: Animal[] = [
      id: "1",
      name: 'Shelter A',
      profileImage: 'https://www.shutterstock.com/image-vector/animal-shelter-logo-safe-pet-600nw-1889566699.jpg',
-
+     website: "https:animal.com",
+     donations,
+     overview: {
+      mission: "Mission",
+      founded: '2023',
+      rescuedCount: 120,
+      shelterCount: 120,
+      goals: [
+        "Buy someting",
+        "Sell something"
+      ]
+     },
+     animals: [
+     ]
    },
    description: 'Adorable kitten looking for a loving home!',
    name: 'Whiskers',
@@ -57,10 +70,24 @@ export const pets: Animal[] = [
       uri:  'https://plus.unsplash.com/premium_photo-1722859221349-26353eae4744?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVycm98ZW58MHx8MHx8fDA%3D',
     }
    ],
-   owner: {
+   shelter: {
      id: "1",
      name: 'John Doe',
      profileImage: 'https://img.freepik.com/vector-gratis/joven-camisa-negra_1308-173618.jpg',
+     website: "https:animal.com",
+     donations,
+     overview: {
+      mission: "Mission",
+      founded: '2023',
+      rescuedCount: 120,
+      shelterCount: 120,
+      goals: [
+        "Buy someting",
+        "Sell something"
+      ]
+     },
+     animals: [
+     ]
    },
    description: 'This playful pup is ready to join your family.',
    name: 'Buddy',
@@ -89,10 +116,24 @@ export const pets: Animal[] = [
       uri:  'https://plus.unsplash.com/premium_photo-1722859221349-26353eae4744?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVycm98ZW58MHx8MHx8fDA%3D',
     }
    ],
-   owner: {
+   shelter: {
      id: "2",
      name: 'Maria Jose',
      profileImage: 'https://static.vecteezy.com/system/resources/previews/004/899/680/non_2x/beautiful-blonde-woman-with-makeup-avatar-for-a-beauty-salon-illustration-in-the-cartoon-style-vector.jpg',
+     website: "https:animal.com",
+     donations,
+     overview: {
+      mission: "Mission",
+      founded: '2023',
+      rescuedCount: 120,
+      shelterCount: 120,
+      goals: [
+        "Buy someting",
+        "Sell something"
+      ]
+     },
+     animals: [
+     ]
    },
    description: 'This playful pup is ready to join your family.',
    name: 'Buddy',

@@ -3,22 +3,33 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'; 
 import { Animal } from '../../interfaces/Animal/Animal';
 import Carousel from './CarouselCard';
+import { useNavigation } from '@react-navigation/native';
+import { Shelter } from '../../interfaces/Shelter';
 
 interface CardFeedProps {
   pet: Animal; 
   onNavigateToProfile: () => void;
 }
 
+type FeedScreenNavigationProp = {
+  navigate: (screen: string, params: { shelter: Shelter }) => void;
+};
+
 const CardFeed: React.FC<CardFeedProps> = ({
-  pet : { id, images, owner, shelter, name, breed, age },
+  pet : { id, images, shelter, name, breed, age },
   onNavigateToProfile,
 }) => {
+    const navigation = useNavigation<FeedScreenNavigationProp>();
+  
   return (
     <View style={styles.card}>
       {/* Poster Info */}
       <View style={styles.posterInfo}>
-        <Image source={{ uri: owner?.profileImage || shelter?.profileImage || "" }} style={styles.posterImage} />
-        <Text style={styles.posterName}>{owner?.name || shelter?.name || ""} </Text>
+          <TouchableOpacity 
+                      onPress={() => navigation.navigate('ShelterProfile', { shelter: shelter })}>
+        <Image source={{ uri:  shelter?.profileImage || "" }} style={styles.posterImage} />
+        <Text style={styles.posterName}>{ shelter?.name || ""} </Text>
+        </TouchableOpacity>
       </View>
 
       {/* Carousel for Pet Images */}

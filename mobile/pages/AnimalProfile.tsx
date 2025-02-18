@@ -2,15 +2,20 @@ import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Icon from 'react-native-vector-icons/Ionicons'; // <-- Using Ionicons
-import { RouteProp } from '@react-navigation/native';
+import { RouteProp, useNavigation  } from '@react-navigation/native';
 import { RootStackParamList } from '../App';
 import DonationsTab from '../components/AnimalProfile/DonationTab';
 import MediaTab from '../components/AnimalProfile/MediaTab';
 import HistoryTab from '../components/AnimalProfile/HistoryTab';
+import { Shelter } from '../interfaces/Shelter';
 
 const Tab = createMaterialTopTabNavigator();
 
 type PetProfileRouteProp = RouteProp<RootStackParamList, 'PetProfile'>;
+
+type FeedScreenNavigationProp = {
+  navigate: (screen: string, params: { shelter?: Shelter }) => void;
+};
 
 interface Props {
   route: PetProfileRouteProp;
@@ -18,6 +23,8 @@ interface Props {
 
 const PetProfile: React.FC<Props> = ({ route }) => {
   const { pet } = route.params;
+  const navigation = useNavigation<FeedScreenNavigationProp>();
+
 
   return (
     <View style={styles.container}>
@@ -27,7 +34,9 @@ const PetProfile: React.FC<Props> = ({ route }) => {
 
         {/* Shelter Info */}
         {pet.shelter && <View style={styles.shelterContainer}>
-          <TouchableOpacity style={styles.shelterButton}>
+          <TouchableOpacity style={styles.shelterButton}
+              onPress={() => navigation.navigate('ShelterProfile', { shelter: pet.shelter })}
+          >
             <Image source={{ uri: pet.shelter?.profileImage }} style={styles.shelterImage} />
             <Text style={styles.shelterName}>{pet.shelter.name}</Text>
           </TouchableOpacity>

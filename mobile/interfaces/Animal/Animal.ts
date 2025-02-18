@@ -1,17 +1,7 @@
 import {Media} from '../Media'
 import {AnimalHistory} from './History'
 import {Donation} from './Donation'
-
-export interface Shelter {
-  id: string;
-  profileImage: string;
-  name: string;
-  location?: string;
-  description?: string;
-  rating?: number;
-  reviews?: number;
-  images?: string[];
-}
+import {Shelter} from '../Shelter'
 export interface Owner {
   id : string;
   name : string;
@@ -26,6 +16,5 @@ export interface Animal {
   age: string; // Pet's age
   history: AnimalHistory;
   donations: Donation[];
-  shelter?: Shelter; // Shelter information if the pet is from a shelter
-  owner?: Owner; // Owner information if the pet is from an owner
+  shelter: Shelter; // Shelter information if the pet is from a shelter
 }

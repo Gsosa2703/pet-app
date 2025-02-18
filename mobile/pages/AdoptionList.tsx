@@ -3,9 +3,10 @@ import { FlatList, StyleSheet, View } from 'react-native';
 import CardFeed from '../components/Feed/Card';
 import { pets } from '../data/pets'
 import { useNavigation } from '@react-navigation/native';
+import { Animal } from '../interfaces/Animal/Animal';
 
 type FeedScreenNavigationProp = {
-  navigate: (screen: string, params: { pet: any }) => void;
+  navigate: (screen: string, params: { pet: Animal }) => void;
 };
 
 const Feed: React.FC = () => {
