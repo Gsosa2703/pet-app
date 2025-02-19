@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Icon from 'react-native-vector-icons/Ionicons'; // <-- Using Ionicons
 import { RouteProp, useNavigation  } from '@react-navigation/native';
-import { RootStackParamList } from '../App';
+import { RootStackParamList } from '../../App';
 import DonationsTab from '../components/AnimalProfile/DonationTab';
 import MediaTab from '../components/AnimalProfile/MediaTab';
 import HistoryTab from '../components/AnimalProfile/HistoryTab';
